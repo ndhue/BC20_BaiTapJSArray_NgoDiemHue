@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container w-50">
+    <form>
+        <div class="form-group">
+            <label for="inputNum">Nhập số nguyên</label>
+            <input type="number" class="form-control w-75" id="inputNum">
+            <button id="btnNum" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Thêm số</button>  
+        <div class="result alert alert-success w-75">
+            <i class="fa fa-hand-point-right text-warning"></i>
+            <span id="printArray"></span>
+        </div>  
+        </div>
+
+        <div class="form-group">
+            <h3>1. Tổng các số dương trong mảng</h3>
+            <button id="btnSum" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Tính tổng</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printSum"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>2. Đếm số dương</h3>
+            <button id="btnCountPost" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Đếm số</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printCountPost"></span>
+            </div>   
+        </div>
+        
+        <div class="form-group">
+            <h3>3. Tìm số nhỏ nhất</h3>
+            <button id="btnMin" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Tìm số nhỏ nhất</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printMin"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>4. Tìm số dương nhỏ nhất</h3>
+            <button id="btnMinPost" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Tìm số dương nhỏ nhất</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printMinPost"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>5. Tìm số chẵn cuối cùng trong mảng</h3>
+            <button id="btnEven" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Tìm số chẵn cuối cùng trong mảng</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printEven"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>6. Đổi chỗ 2 giá trị trong mảng theo vị trí</h3>
+            <div class="col-auto mb-2">
+                <input type="number" class="form-control" id="so1" placeholder="Vị trí 1">
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control mb-2" id="so2" placeholder="Vị trí 2">
+            </div>
+            <button id="btnChange" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Đổi chỗ</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printChange"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>7. Sắp xếp mảng theo thứ tự tăng dần</h3>
+            <button id="btnSort" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Sắp xếp</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printSort"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>8. Tìm số nguyên tố đầu tiên trong mảng</h3>
+            <button id="btnPrime" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Tìm số nguyên tố đầu tiên trong mảng</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printPrime"></span>
+            </div>   
+        </div>
+
+        <div class="form-group">
+            <h3>9. Đếm số nguyên</h3>
+            <input type="number" class="form-control w-75" id="inputNum1" placeholder="Nhập số nguyên">
+            <button id="btnPositiveArr" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Thêm số</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="printPositiveArr"></span>
+            </div>  
+            <button id="btnPositive" type="button" class="btn btn-primary my-2 px-4 rounded-pill">Đếm số nguyên</button>  
+        <div class="result alert alert-success w-75">
+            <i class="fa fa-hand-point-right text-warning"></i>
+            <span id="printPositive"></span>
+        </div>  
+        </div>
+
+        <div class="form-group">
+            <h3>10. So sánh số lượng số dương và số âm</h3>
+            <button id="btn10" type="button" class="btn btn-primary my-2 px-4 rounded-pill">So sánh</button>  
+            <div class="result alert alert-success w-75">
+                <i class="fa fa-hand-point-right text-warning"></i>
+                <span id="print10"></span>
+            </div>   
+        </div>
+    </form>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
